@@ -1,0 +1,14 @@
+name = "innowine-d35-analytics"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+# Replace database_name/id with your own D1 instance after creating it.
+[[d1_databases]]
+binding = "DB"
+database_name = "innowine-d35"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[vars]
+# Do not use a wildcard in production. Example: https://yourname.github.io
+ALLOWED_ORIGIN = "https://YOUR_GITHUB_USERNAME.github.io"
+# Set ADMIN_TOKEN using: npx wrangler secret put ADMIN_TOKEN

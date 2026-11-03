@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111f1b">
+  <meta name="description" content="INNOWINE D3.5 – a decision-based learning simulator for sustainable dealcoholised wine production, labelling and market strategy.">
+  <title>INNOWINE • Decision Lab | D3.5 Gamified Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to main content</a>
+  <div class="shell">
+    <header class="topbar">
+      <button type="button" class="wordmark" id="nav-home" aria-label="INNOWINE home">
+        <img class="brand-logo" src="assets/INNOWINE_original_logo.png" alt="">
+        <span class="wordmark-text">INNOWINE <small>DECISION LAB</small></span>
+      </button>
+      <div class="topbar-centre"><span class="project-tag">ERASMUS+ · KA220-VET</span><span class="tiny-separator"></span><span class="project-tag">D3.5 · GAMIFIED SIMULATOR</span></div>
+      <div class="topbar-actions">
+        <div class="language-group" role="group" aria-label="Language">
+          <button id="lang-en" type="button" class="language active" aria-pressed="true">EN</button>
+          <button id="lang-it" type="button" class="language" aria-pressed="false">IT</button>
+        </div>
+        <button type="button" class="header-button" id="nav-reports" data-i18n="evidence">Evidence</button>
+      </div>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar" aria-label="Scenario navigation">
+        <div class="aside-topline"><span class="eyebrow" data-i18n="yourJourney">YOUR JOURNEY</span><span class="chapter-counter" id="chapter-counter">0 / 15</span></div>
+        <div class="journey-progress" role="progressbar" aria-label="Scenarios completed" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="journey-progress"><span id="journey-fill"></span></div>
+        <div id="scenario-nav" class="scenario-nav"></div>
+        <div class="sidebar-bottom"><span class="circle-icon">✦</span><p data-i18n="sidebarHint">Practice decisions. See consequences. Build better skills.</p></div>
+      </aside>
+      <main id="main-content" class="main-content" tabindex="-1">
+        <div id="screen" aria-live="polite"></div>
+      </main>
+      <aside class="rightbar" aria-label="Performance dashboard">
+        <div class="rightcard simulation-panel">
+          <div class="small-header"><span data-i18n="liveDashboard">LIVE DASHBOARD</span><span class="pulse"></span></div>
+          <h3 data-i18n="yourWinery">Your winery</h3>
+          <p class="subtle" data-i18n="scoreExplanation">Illustrative learning indicators, not real financial or environmental forecasts.</p>
+          <div id="metrics" class="metrics"></div>
+        </div>
+        <div class="rightcard compact-panel">
+          <div class="small-header" data-i18n="learningRecord">LEARNING RECORD</div>
+          <div class="mini-stat"><span data-i18n="choicesRecorded">Choices recorded</span><strong id="stat-choices">0</strong></div>
+          <div class="mini-stat"><span data-i18n="scenariosFinished">Scenarios finished</span><strong id="stat-completed">0</strong></div>
+          <div class="mini-stat"><span data-i18n="improvement">Error reduction</span><strong id="stat-improvement">—</strong></div>
+          <div class="tip" id="comparison-tip" data-i18n="comparisonTip">Complete scenarios 01 and 15 for a matched before/after comparison.</div>
+        </div>
+        <div class="real-logo-card"><span class="small-header" data-i18n="projectIdentity">ORIGINAL PROJECT IDENTITY</span><img src="assets/INNOWINE_original_logo.png" alt="Original INNOWINE project logo, including Erasmus+ identity"></div>
+      </aside>
+    </div>
+    <footer class="footer"><span>INNOWINE · 2026-1-IT01-KA220-VET-000450353</span><span data-i18n="footerNotice">Educational simulation • Scientific and legal review required before final publication</span><button id="nav-privacy" type="button" data-i18n="privacy">Privacy & data</button></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
